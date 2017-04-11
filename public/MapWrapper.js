@@ -15,10 +15,9 @@ MapWrapper.prototype = {
       content: contentString 
     })
 
-    marker.addListener('click', function() {
-      infowindow.open(this.googleMap, marker);
-    })
-
+      marker.addListener('click', function() {
+        infowindow.open(this.googleMap, marker);
+      })
   },
 
 
@@ -28,6 +27,11 @@ MapWrapper.prototype = {
     }.bind(this))
   },
 
+
+  // moveCenter: function(chicagoCenter){
+  //   var chicagoButton = document.querySelector('#chicago-button')
+      
+  // }
 
 }
 
