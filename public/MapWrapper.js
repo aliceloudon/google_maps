@@ -20,18 +20,11 @@ MapWrapper.prototype = {
       })
   },
 
-
   addClickEvent: function(){
     google.maps.event.addListener(this.googleMap, 'click', function(event){
       this.addMarker(event.latLng)
     }.bind(this))
-  },
-
-
-  // moveCenter: function(chicagoCenter){
-  //   var chicagoButton = document.querySelector('#chicago-button')
-      
-  // }
+  }
 
 }
 
