@@ -4,16 +4,18 @@ var initialize = function() {
   var chicagoLocation = { lat: 41.878114, lng: -87.629798}
   var contentString = 'This is where I live'
   var container = document.getElementById('main-map')
-  var mainMap = new MapWrapper(container, homeLocation, 15)
+  var mainMap = new MapWrapper(container, homeLocation, 1)
 
 
 
   var handleChicagoButtonClicked = function(){
     mainMap.googleMap.setCenter(chicagoLocation)
+    mainMap.googleMap.setZoom(10)
   }
 
   var handleHomeButtonClicked = function(){
     mainMap.googleMap.setCenter(homeLocation)
+    mainMap.googleMap.setZoom(15)
   }
 
   var handleWhereAmIButtonClicked = function(){
@@ -24,6 +26,7 @@ var initialize = function() {
       var longitude = position.coords.longitude;
       var geolocation = { lat: latitude, lng: longitude }
       mainMap.googleMap.setCenter(geolocation)
+      mainMap.googleMap.setZoom(15)
     })
 
   // It works! Just takes a few seconds to get there
